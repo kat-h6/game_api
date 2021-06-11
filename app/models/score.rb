@@ -5,4 +5,8 @@ class Score < ApplicationRecord
   def final_score
     ((game_score * 100) / time_spent_seconds).floor
   end
+
+  def week
+    self.timestamp.strftime('%W')
+  end
 end

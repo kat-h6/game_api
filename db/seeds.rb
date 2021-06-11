@@ -23,3 +23,12 @@ end
   )
   puts "score added"
 end
+
+
+Score.create!(
+  timestamp: (DateTime.now - 10),
+  game_score: 1000,
+  time_spent_seconds: 20,
+  player_id: Player.first.id
+)
+puts "highest score added"
