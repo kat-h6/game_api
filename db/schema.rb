@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_06_10_161922) do
   create_table "scores", force: :cascade do |t|
     t.datetime "timestamp"
     t.integer "game_score"
-    t.time "time_spent"
+    t.float "time_spent_seconds"
     t.bigint "player_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

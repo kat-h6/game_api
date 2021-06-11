@@ -3,7 +3,7 @@ class CreateScores < ActiveRecord::Migration[6.0]
     create_table :scores do |t|
       t.datetime :timestamp
       t.integer :game_score
-      t.time :time_spent
+      t.float :time_spent_seconds
       t.references :player, null: false, foreign_key: true
 
       t.timestamps
