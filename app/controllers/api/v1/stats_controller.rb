@@ -7,7 +7,7 @@ class Api::V1::StatsController < Api::V1::BaseController
     @top_p_this_week = []
     @players.each do |player|
       player.scores.each do |score|
-        score.week == @week
+        @top_p_this_week << player if score.week == @week
       end
     end
     @top_ten_players = @top_p_this_week[1..10]
