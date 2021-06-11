@@ -1,11 +1,16 @@
 class Api::V1::StatsController < Api::V1::BaseController
   def show
-    @scores = Score.order(game_score: :desc)
+    @players = Player.joins(:scores).group(:players_id).order(game_score: :desc, time_spent_seconds: :desc)
+    # raise
+    # @scores = Score.order(final_score: :desc)
     @week = params[:id]
-    @this_weeks_scores = []
-    @scores.each do |score|
-      @this_weeks_scores << score if score.week == @week
+    @top_p_this_week = []
+    @players.each do |player|
+      player.scores.each do |score|
+        score.week == @week
+      end
     end
-    @top_ten_scores = @this_weeks_scores[1..10]
+    @top_ten_players = @top_p_this_week[1..10]
+    raise
   end
 end

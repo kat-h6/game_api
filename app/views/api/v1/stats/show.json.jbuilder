@@ -1,3 +1,4 @@
-json.array! @top_ten_scores do |score|
-  json.extract! score, :id, :player_id, :timestamp, :game_score, :time_spent_seconds
+json.top_ten_players
+json.array! @top_ten_players do |player|
+  json.extract! player, :id, :name
 end

@@ -15,7 +15,7 @@ Score.destroy_all
 end
 
 30.times do
-  Score.create!(
+  score = Score.create!(
     timestamp: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now + 2),
     game_score: rand(100..500),
     time_spent_seconds: rand(30..60),
@@ -25,7 +25,7 @@ end
 end
 
 
-Score.create!(
+highest_score = Score.create!(
   timestamp: (DateTime.now - 10),
   game_score: 1000,
   time_spent_seconds: 20,
