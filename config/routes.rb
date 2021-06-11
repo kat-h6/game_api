@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :players, only: [:index, :show, :update ]
+      resources :players, only: [:index, :show, :update, :create, :destroy ]
       resources :stats, only: :show
     end
   end
