@@ -4,4 +4,5 @@ json.array! @players do |player|
   json.top_score player.top_score
   json.playthroughs player.playthroughs
   json.total_time_played player.total_time_played
+  json.difference_score player.difference_score
 end
