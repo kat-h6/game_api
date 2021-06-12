@@ -16,7 +16,7 @@ end
 
 30.times do
   score = Score.create!(
-    timestamp: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now + 2),
+    timestamp: Faker::Time.between(from: DateTime.now - 5, to: DateTime.now),
     game_score: rand(100..500),
     time_spent_seconds: rand(30..60),
     player_id: rand(Player.first.id..Player.last.id)

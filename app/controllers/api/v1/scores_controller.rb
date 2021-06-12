@@ -5,7 +5,6 @@ class Api::V1::ScoresController < Api::V1::BaseController
   end
 
   def show
-    @player = @score.player
   end
 
   def update
@@ -17,7 +16,7 @@ class Api::V1::ScoresController < Api::V1::BaseController
   end
 
   def create
-    @score = Score.new(player_params)
+    @score = Score.new(score_params)
     if @score.save
       render :show, status: :created
     else
