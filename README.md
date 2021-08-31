@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# JSON API that contains information about players and their scores
+displays top player scores according to the week and an impact report according to the score differences of each player
+API documentation: https://documenter.getpostman.com/view/16202173/TzeTKV7S
